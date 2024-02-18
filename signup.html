@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicify</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style1.css">
+   
+    
+</head>
+<body>
+        <div class="wrapper">
+            <h1>Sign Up</h1>
+            
+            <div class="input-box">
+                <input type="text" placeholder="Contact Number" required>               
+            </div>
+            <div class="input-box">
+                <input id="email" type="text" placeholder="Email" required>  
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>               
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>              
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">I agree the terms & conditions </label>
+                
+            </div>
+
+            <button type="submit" onclick="validate()" class="btn" id="signup">Sign Up</button>
+        </div>
+        <script>
+
+            function validate()
+            {
+                var mail=document.getElementById("email").value;
+                var regx=/^([a-zA-Z0-9\.]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+                if(!regx.text(mail)){
+                    alert("You have provided an invalid email ID")
+                    return false;
+                }
+                else
+                {
+                    document.getElementById("signup").onclick = function() {
+                        location.href = "main.html";
+                     };
+                }
+            }
+        </script>
+    </body>
+</html>
